@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>WAVファイル変換・抽出ツール(wavext)</title>
+  </head>
+  <body>
+    <p style="text-align: right;">
+      <!-- shinobi ct1 -->
+      <script type="text/javascript" src="http://ct1.choumusubi.com/sc/0761940"></script> <noscript><a
+href="http://ct1.choumusubi.com/gg/0761940" target="_blank">
+<img src="http://ct1.choumusubi.com/ll/0761940" alt="カウンター" border="0"></a><br>
+<span id="NINCT1SPAN0761940" style="font-size:9px"></span></noscript>
+      <!-- /shinobi ct1 --> </p>
+    <h1>WAVファイル変換・抽出ツール(wavext)</h1>
+    <p>最終更新日：2013/4/14</p>
+    <p>mp3等の形式の音声ファイルをWAV形式に変換するコマンドラインツールです。変換するときに任意のビットレートを指定できます。動画ファイルから音声を抽出することもできます。Windows Media Playerで再生可能なファイルであればほぼ変換可能です。</p>
+    <h2>特徴</h2>
+    <ul>
+      <li>コマンドライン形式なのでバッチ処理が可能</li>
+      <li>任意のビットレートに変換できる</li>
+      <li>WAVファイル同士の変換も可能</li>
+      <li>Windows Media Playerで再生可能なファイルであれば変換可能</li>
+      <li>動画ファイルから音声の抽出も可能<br>
+      </li>
+    </ul>
+    <h2>確認済みフォーマット</h2>
+    <ul>
+      <li>.wav</li>
+      <li>.mp3</li>
+      <li>.wma<br>
+      </li>
+      <li>.ra (Real Audio) ※Real Playerのインストールが必要</li>
+      <li>.avi</li>
+      <li>.mpg</li>
+      <li>.wmv</li>
+    </ul>
+    <h2>動作環境</h2>
+    <ul>
+      <li>Windows 2000/XP/Vista/7</li>
+    </ul>
+    <h2>ダウンロード</h2>
+    <ul>
+      <li><a href="http://www.vector.co.jp/soft/winnt/art/se426439.html">最新バージョン</a> ver 1.04</li>
+    </ul>
+    <h4>以前のバージョン<br>
+    </h4>
+    <ul>
+      <li><a href="wavext103.zip">ver 1.03</a></li>
+      <li><a href="http://www.vector.co.jp/soft/win95/art/se426439.html"></a><a
+          href="wavext102.zip">ver 1.02</a></li>
+      <li><a href="wavext101.zip">ver 1.01</a></li>
+    </ul>
+    <h4>ソースコード<br>
+    </h4>
+    <ul>
+      <li><a href="wavext104_src.zip">ver 1.04</a> (Visual C++ 2010 Express Edition用プロジェクト。Windows SDKサンプルのmultimedia\directshow\baseclassesが必要。)<br>
+        <a href="wavext102_src.zip"></a></li>
+      <li><a href="wavext102_src.zip"> ver 1.02</a> (Visual C++ 2005 Express Edition用プロジェクト)</li>
+    </ul>
+    <h2>インストール/アンインストール方法</h2>
+    【インストール方法】<br>
+    ダウンロードした圧縮ファイルを任意のインストールしたいフォルダに解凍してください。<br>
+    <br>
+    【アンインストール方法】<br>
+    インストールしたフォルダを削除してください。<br>
+    <h2>使い方</h2>
+    引数なしで実行するとファイルダイアログが表示されますので、変換したいファイルを選択してください。<br>
+    選択したファイルと同じフォルダに変換後のファイルが作成されます。<br>
+    <br>
+    コマンドラインで引数を指定して実行する場合は、第一引数に変換したいファイルを指定して実行します。<br>
+    ビットレートを指定するときは第1,2,3引数にそれぞれ、ステレオ(2)/モノラル(1)、サンプルレート、サンプルビットを指定し、<br>
+    第4引数に変換したいファイルを指定して実行します。<br>
+    変換後のファイルは元のファイルと同じフォルダに出力されます。<br>
+    <br>
+    変換後のファイル名を指定したい場合は、最後の引数に変換後のファイル名を指定してください。<br>
+    <br>
+    引数なしで実行して、ファイルダイアログをキャンセルすると引数の説明が表示されます。
+    <p>usage : wavext [Channels SamplesPerSec BitsPerSample] &lt;file&gt; [&lt;output file&gt;]<br>
+      &nbsp;&nbsp;&nbsp; Channels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:mono 2:stereo<br>
+      &nbsp;&nbsp;&nbsp; SamplesPerSec&nbsp;&nbsp; 8000 11025 16000 22050 32000 44100 etc<br>
+      &nbsp;&nbsp;&nbsp; BitsPerSample&nbsp;&nbsp; 8 16</p>
+    <p>&nbsp;&nbsp;&nbsp; example)&nbsp;&nbsp; wavext test.mp3<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wavext 2 44100 16 test.mp3<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wavext test.mp3 out.wav<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wavext 2 44100 16 test.mp3 out.wav</p>
+    <h2>著作権/免責/注意事項</h2>
+    <p>本ソフトウェアはフリーなのでご自由に使用ください。なお、著作権は作者である山岡忠夫が保有しています。<br>
+      雑誌・ホームページ等への掲載、再配布時の連絡は不要です。<br>
+      また、本ソフトウェアは使用した結果については、作者は一切責任を負えないためご了承ください。</p>
+    <h2>サポート/連絡先</h2>
+    <p>意見・要望・感想・バグ報告は掲示板で承りますので、気軽にご連絡ください。</p>
+    <p>&nbsp;&nbsp;&nbsp; <a href="http://yy.atbbs.jp/yamaoka/">http://yy.atbbs.jp/yamaoka/</a><br>
+      <br>
+      Vectorのページからもコメント・評価を記載できます。</p>
+    <p>&nbsp;&nbsp;&nbsp; <a href="http://www.vector.co.jp/soft/cmt/win95/art/se426439.html">http://www.vector.co.jp/soft/cmt/win95/art/se426439.html</a></p>
+    <h2>参考</h2>
+    このツールは<a href="http://hp.vector.co.jp/authors/VA000022/srdtk/srdtk.html"> ランダムハウス英語辞典Toolkit</a> を使用するときに約10万個のRealAudio形式(拡張子.ra)をWAV形式に変換する必要があったので作成しました。<br>
+    作成する前にすでにあるツールを探して使用しようと思いましたが、探したツールはどれも大量のファイルをバッチ処理するのには向いていませんでした。<br>
+    試用したツールは以下のものです。
+    <ul>
+      <li><a href="http://www.mp3-world.net/software-download/1055-ra2wav.html">ra2wav</a> ※うまく動作しなかった</li>
+      <li> <a href="http://www.winamp.com/">winamp</a> + Nullsoft Disk Writer plug-in ※2ファイル以上だとうまく動作しなかった</li>
+      <li> <a href="http://www.vector.co.jp/soft/win95/art/se185896.html"> ぷっちでここ</a> ※連続70ファイルを超えると異常終了した</li>
+    </ul>
+    <p>結局、大量のファイルを手動で変換するよりはツールを作成した方が楽そうだったため作成しました。<br>
+      ツールはDirectShowを使用して開発しています。ソースコードも公開しているのでDirectShowのサンプルとしても役に立つと思います。<br>
+      WAVファイルの出力にはPlatform SDKのサンプルに含まれるwavdest.axを使用しています。(ver 1.03からは不要になりました。)<br>
+      開発環境は、<a href="http://www.microsoft.com/japan/msdn/vstudio/express/visualc/">Visual C++ 2005 Express Edition</a> + <a
+        href="http://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Platform SDK</a>です。どちらもMicrosoftのサイトから無料で入手できます。改良は自由に行って頂いても結構です。(ver 1.03からは<a
+        href="http://www.microsoft.com/japan/msdn/vstudio/express/visualc/">Visual C++ 2010 Express Edition</a>を使用しています。)</p>
+    <h2>更新履歴<br>
+    </h2>
+    <p>&nbsp;&nbsp;&nbsp; ver 1.04&nbsp; 2013/4/14<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・動画ファイルから音声の抽出ができなくなっていた不具合を修正<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ビットレート等の指定ができなくなっていた不具合を修正</p>
+    <p>&nbsp;&nbsp;&nbsp; ver 1.03&nbsp; 2012/3/19<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・wavdest.axを不要とした。(カスタムフィルターに変更)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・引数なしで起動した場合、ファイルダイアログを表示するようにした。</p>
+    <p>&nbsp;&nbsp;&nbsp; ver 1.02&nbsp; 2007/9/25<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・出力ファイル名を指定する引数を追加<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・.wmvに対応(Videoフィルターの解放処理を追加)</p>
+    <p>&nbsp;&nbsp;&nbsp; ver 1.01&nbsp; 2007/4/30<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・Visual C++ 2005 ランタイム(MSVCRT80.dll)を不要とした。(スタティックリンク)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・Windows XPでwavdest.axのレジストリ登録を不要とした。(マニフェスト埋め込み)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・引数なしで実行したときの説明文を修正</p>
+    <p>&nbsp;&nbsp;&nbsp; ver 1.00&nbsp; 2007/4/3<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初公開</p>
+    <a href="http://hp.vector.co.jp/authors/VA046927/">
+      <p>トップページへ</p>
+    </a>
+  </body>
+</html>

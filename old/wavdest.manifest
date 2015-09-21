@@ -1,0 +1,7 @@
+﻿<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>
+    <file name="wavdest.ax">
+        <comClass  
+            clsid="{3C78B8E2-6C4D-11D1-ADE2-0000F8754B99}" /> 
+    </file>
+</assembly>
