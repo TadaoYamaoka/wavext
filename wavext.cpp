@@ -359,19 +359,7 @@ int wmain(int argc, wchar_t* argv[])
 		fprintf(stderr, "error : illegal mediatype\n");
 		return 1;
 	}
-	if (nChannels != 0)
-	{
-		if (nSamplesPerSec > ((WAVEFORMATEX*)(mtsrc.pbFormat))->nSamplesPerSec ||
-			nChannels*wBitsPerSample > ((WAVEFORMATEX*)(mtsrc.pbFormat))->nChannels * ((WAVEFORMATEX*)(mtsrc.pbFormat))->wBitsPerSample)
-		{
-			fprintf(stderr, "error : bitrate too big (%d %d %d)\n",
-				((WAVEFORMATEX*)(mtsrc.pbFormat))->nChannels,
-				((WAVEFORMATEX*)(mtsrc.pbFormat))->nSamplesPerSec,
-				((WAVEFORMATEX*)(mtsrc.pbFormat))->wBitsPerSample);
-			return 1;
-		}
-	}
-	else
+	if (nChannels == 0)
 	{
 		nChannels      = ((WAVEFORMATEX*)(mtsrc.pbFormat))->nChannels;
 		nSamplesPerSec = ((WAVEFORMATEX*)(mtsrc.pbFormat))->nSamplesPerSec;
